@@ -1,31 +1,33 @@
 
+
 /***** Erinnerung: Arrays *******/
 
- let arr;
+let arr;
 arr = ["Ich","bin","Max"];
 output(arr);
 output(arr[0]);
-
-
 output("------------");
 
-
-/***** Objekte 1 Daten/Funktionen *******/
-
-// nested arrays - Prinzip:[[[]]]
-// nested arraysn-hier: [[],[]]
+// nested arrays - Prinzip: [[[]]]
+// nested arrays  - hier: [[],[]]
 arr =   [
                 ["Ich","bin","Max"],
                 ["Ich","bin","Moritz"]
         ];
-        // output(arr[0][2]);
-        // output(arr[0][0]);
 
-for (let i = 0; i < arr.length; i++) {
-     output(arr[i]);
         
-}
+output(arr);
+output(arr[0]);
+output(arr[0][0]+ " " + arr[1][2]);
+output(arr[1][0]);
 
+// nested loop
+for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+        output("Index i: " + i + " Index j: " + j);
+        output(arr[i][j]);       
+    }
+}
 /** Ausgabe */
 function output(outputData) {
         console.log(outputData);
